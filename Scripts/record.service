@@ -1,0 +1,12 @@
+[Unit]
+Description=Records over 1min the rtl-sdr
+After=syslog.target
+
+[Service]
+WorkingDirectory=/home/pi/work
+ExecStart=/home/pi/work/record.sh
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
